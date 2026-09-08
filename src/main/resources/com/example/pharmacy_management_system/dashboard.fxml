@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="CENTER" hgap="20.0" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #ECF0F1;" vgap="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pharmacy_management_system.DashboardController">
+    <padding>
+        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+    </padding>
+    <children>
+        <Label text="Pharmacy Shop Management - Dashboard" GridPane.columnSpan="2">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Button fx:id="btnMedicine" onAction="#goToMedicine" prefHeight="100.0" prefWidth="250.0" style="-fx-background-color: #5DADE2; -fx-text-fill: white; -fx-background-radius: 10;" text="Medicine List" GridPane.rowIndex="1">
+            <font> <Font name="System Bold" size="16.0" /> </font>
+        </Button>
+
+        <Button onAction="#goToStaff" prefHeight="100.0" prefWidth="250.0" style="-fx-background-color: #48C9B0; -fx-text-fill: white; -fx-background-radius: 10;" text="Staff List" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <font> <Font name="System Bold" size="16.0" /> </font>
+        </Button>
+
+        <Button onAction="#goToBilling" prefHeight="100.0" prefWidth="250.0" style="-fx-background-color: #F4D03F; -fx-text-fill: white; -fx-background-radius: 10;" text="Billing" GridPane.rowIndex="2">
+            <font> <Font name="System Bold" size="16.0" /> </font>
+        </Button>
+
+        <Button onAction="#goToAlerts" prefHeight="100.0" prefWidth="250.0" style="-fx-background-color: #EB984E; -fx-text-fill: white; -fx-background-radius: 10;" text="Alerts Stock (&lt;10)" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <font> <Font name="System Bold" size="16.0" /> </font>
+        </Button>
+
+        <Button onAction="#goToChangePassword" prefHeight="100.0" prefWidth="250.0" style="-fx-background-color: #BDC3C7; -fx-text-fill: white; -fx-background-radius: 10;" text="Change Password" GridPane.rowIndex="3">
+            <font> <Font name="System Bold" size="16.0" /> </font>
+        </Button>
+
+        <Button fx:id="btnSwitch" onAction="#handleLogout" prefHeight="100.0" prefWidth="250.0" style="-fx-background-color: #E74C3C; -fx-text-fill: white; -fx-background-radius: 10;" text="Logout / Switch" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <font> <Font name="System Bold" size="16.0" /> </font>
+        </Button>
+    </children>
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>

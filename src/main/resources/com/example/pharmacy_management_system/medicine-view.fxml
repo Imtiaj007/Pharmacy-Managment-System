@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pharmacy_management_system.MedicineController">
+    <children>
+        <AnchorPane prefHeight="600.0" prefWidth="300.0" style="-fx-background-color: #d1d8e0;">
+            <children>
+                <Label layoutX="20.0" layoutY="30.0" text="Medicine Details" textFill="#2d3436">
+                    <font><Font name="System Bold" size="22.0" /></font>
+                </Label>
+
+                <TextField fx:id="med_name" layoutX="20.0" layoutY="100.0" prefHeight="30.0" prefWidth="250.0" promptText="Medicine Name" />
+                <TextField fx:id="med_cat" layoutX="20.0" layoutY="150.0" prefHeight="30.0" prefWidth="250.0" promptText="Category (e.g. Syrup, Tablet)" />
+                <TextField fx:id="med_stock" layoutX="20.0" layoutY="200.0" prefHeight="30.0" prefWidth="250.0" promptText="Stock Quantity" />
+                <TextField fx:id="med_price" layoutX="20.0" layoutY="250.0" prefHeight="30.0" prefWidth="250.0" promptText="Price per unit" />
+
+                <Button layoutX="20.0" layoutY="320.0" onAction="#addMedicine" prefHeight="40.0" prefWidth="250.0" style="-fx-background-color: #20bf6b;" text="Add Medicine" textFill="WHITE">
+                    <font><Font name="System Bold" size="14.0" /></font>
+                </Button>
+
+                <Button layoutX="20.0" layoutY="375.0" onAction="#clearFields" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: #4b6584;" text="Clear Fields" textFill="WHITE" />
+
+                <Button layoutX="20.0" layoutY="540.0" onAction="#backToDashboard" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #eb4d4b;" text="← Back" textFill="WHITE" />
+            </children>
+        </AnchorPane>
+
+        <TextField fx:id="med_search" layoutX="320.0" layoutY="30.0" onKeyTyped="#searchMedicine" prefHeight="35.0" prefWidth="400.0" promptText="🔍 Search Medicine by Name or Category..." style="-fx-background-radius: 20; -fx-padding: 0 0 0 15;" />
+
+        <TableView fx:id="medicineTable" layoutX="320.0" layoutY="85.0" prefHeight="485.0" prefWidth="550.0">
+            <columns>
+                <TableColumn fx:id="col_name" prefWidth="180.0" text="Medicine Name" />
+                <TableColumn fx:id="col_cat" prefWidth="150.0" text="Category" />
+                <TableColumn fx:id="col_stock" prefWidth="100.0" text="Stock" />
+                <TableColumn fx:id="col_price" prefWidth="118.0" text="Price (Tk)" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

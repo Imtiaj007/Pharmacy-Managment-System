@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pharmacy_management_system.HelloController">
+   <children>
+      <TextField fx:id="username" layoutX="226.0" layoutY="146.0" promptText="Username" />
+      <PasswordField fx:id="password" layoutX="226.0" layoutY="188.0" promptText="Password" />
+      <Button fx:id="loginBtn" layoutX="274.0" layoutY="235.0" mnemonicParsing="Parsing" onAction="#loginAdmin" text="Login" />
+      <Text layoutX="244.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pharmacy Login" />
+      <Hyperlink text="Hyperlink" />
+   </children>
+</AnchorPane>

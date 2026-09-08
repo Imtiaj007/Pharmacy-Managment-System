@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pharmacy_management_system.AlertStockController">
+    <children>
+        <AnchorPane prefHeight="600.0" prefWidth="300.0" style="-fx-background-color: #d1d8e0;">
+            <children>
+                <Label layoutX="20.0" layoutY="30.0" text="Low Stock Alerts" textFill="#c23616">
+                    <font><Font name="System Bold" size="22.0" /></font>
+                </Label>
+                <Label layoutX="20.0" layoutY="80.0" prefWidth="250.0" text="The items listed here have a stock quantity of less than 10 units. Please restock immediately." wrapText="true">
+                    <font><Font size="14.0" /></font>
+                </Label>
+
+                <Button layoutX="20.0" layoutY="530.0" onAction="#backToDashboard" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #4b6584;" text="← Back" textFill="WHITE">
+                    <font><Font name="System Bold" size="14.0" /></font>
+                </Button>
+            </children>
+        </AnchorPane>
+
+        <Label layoutX="320.0" layoutY="30.0" text="Inventory Warning List" textFill="#2d3436">
+            <font><Font name="System Bold" size="20.0" /></font>
+        </Label>
+
+        <TableView fx:id="alertTable" layoutX="320.0" layoutY="85.0" prefHeight="485.0" prefWidth="550.0" style="-fx-border-color: #fab1a0;">
+            <columns>
+                <TableColumn fx:id="col_name" prefWidth="200.0" text="Medicine Name" />
+                <TableColumn fx:id="col_cat" prefWidth="180.0" text="Category" />
+                <TableColumn fx:id="col_stock" prefWidth="168.0" text="Current Stock" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pharmacy_management_system.BillingController">
+    <children>
+        <AnchorPane prefHeight="650.0" prefWidth="350.0" style="-fx-background-color: #d1d8e0;">
+            <children>
+                <Label layoutX="20.0" layoutY="20.0" text="Billing System" textFill="#2d3436">
+                    <font><Font name="System Bold" size="24.0" /></font>
+                </Label>
+
+                <Label layoutX="20.0" layoutY="80.0" text="Customer Name:" />
+                <TextField fx:id="customer_name" layoutX="20.0" layoutY="100.0" prefWidth="300.0" promptText="Guest" />
+
+                <Label layoutX="20.0" layoutY="150.0" text="Select Medicine:" />
+                <ComboBox fx:id="medicine_selector" layoutX="20.0" layoutY="170.0" onAction="#updatePrice" prefWidth="300.0" promptText="Choose Medicine" />
+
+                <Label layoutX="20.0" layoutY="220.0" text="Quantity:" />
+                <TextField fx:id="bill_qty" layoutX="20.0" layoutY="240.0" prefWidth="300.0" promptText="Enter Quantity" />
+
+                <Label layoutX="20.0" layoutY="290.0" text="Price per unit:" />
+                <TextField fx:id="bill_price" editable="false" layoutX="20.0" layoutY="310.0" prefWidth="300.0" style="-fx-background-color: #f1f2f6;" />
+
+                <Button layoutX="20.0" layoutY="380.0" onAction="#addToCart" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: #20bf6b;" text="Add to Cart" textFill="WHITE">
+                    <font><Font name="System Bold" size="14.0" /></font>
+                </Button>
+
+                <Button layoutX="20.0" layoutY="580.0" onAction="#backToDashboard" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #4b6584;" text="← Back" textFill="WHITE" />
+            </children>
+        </AnchorPane>
+
+        <TableView fx:id="cartTable" layoutX="370.0" layoutY="80.0" prefHeight="400.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="col_item" prefWidth="250.0" text="Medicine Name" />
+                <TableColumn fx:id="col_qty" prefWidth="100.0" text="Qty" />
+                <TableColumn fx:id="col_price" prefWidth="120.0" text="Unit Price" />
+                <TableColumn fx:id="col_total" prefWidth="128.0" text="Total" />
+            </columns>
+        </TableView>
+
+        <Label layoutX="750.0" layoutY="500.0" text="Grand Total: ">
+            <font><Font name="System Bold" size="20.0" /></font>
+        </Label>
+        <Label fx:id="grand_total_label" layoutX="880.0" layoutY="500.0" text="0.00 Tk" textFill="#eb4d4b">
+            <font><Font name="System Bold" size="20.0" /></font>
+        </Label>
+
+        <Button layoutX="770.0" layoutY="560.0" onAction="#confirmBill" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #eb4d4b;" text="Confirm &amp; Print Bill" textFill="WHITE">
+            <font><Font name="System Bold" size="16.0" /></font>
+        </Button>
+    </children>
+</AnchorPane>
