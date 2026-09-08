@@ -10,6 +10,5 @@
       <PasswordField fx:id="password" layoutX="226.0" layoutY="188.0" promptText="Password" />
       <Button fx:id="loginBtn" layoutX="274.0" layoutY="235.0" mnemonicParsing="Parsing" onAction="#loginAdmin" text="Login" />
       <Text layoutX="244.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pharmacy Login" />
-      <Hyperlink text="Hyperlink" />
    </children>
 </AnchorPane>
